@@ -6,10 +6,10 @@ const createController = require("./controllers/createController.js");
 
 const router = express.Router();
 
-router.get('/', homeController.index)
+router.use(homeController)
 
-router.get("/about", aboutController.about)
+router.use(aboutController)
 
-router.get("/create", createController.create)
+router.use(createController)
 
 module.exports = router;
